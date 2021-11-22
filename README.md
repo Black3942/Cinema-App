@@ -49,7 +49,7 @@ GET: /users/by-email - admin<br/>
 
 2. Install [Apache Tomcat](https://tomcat.apache.org/download-90.cgi)® version 9.0.54 or latest on your computer as a web server.
 
-3. You need is relational database like MySQL or PostgreSQL. If you wanna connect my project to your database:
+3. You need is relational database like MySQL or PostgreSQL:
 
 ```java
 #Database properties
