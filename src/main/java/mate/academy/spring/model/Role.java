@@ -1,6 +1,5 @@
 package mate.academy.spring.model;
 
-import java.util.Arrays;
 import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -19,14 +18,6 @@ public class Role {
     @Enumerated(value = EnumType.STRING)
     private RoleName role;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public RoleName getRole() {
         return role;
     }
@@ -35,25 +26,12 @@ public class Role {
         this.role = role;
     }
 
-    public enum RoleName {
-        ADMIN("ADMIN"),
-        USER("USER");
+    public Long getId() {
+        return id;
+    }
 
-        private final String name;
-
-        RoleName(String name) {
-            this.name = name;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public static RoleName getRoleByName(String name) {
-            return Arrays.stream(RoleName.values())
-                    .filter(e -> e.getName().equals(name))
-                    .findFirst().get();
-        }
+    public void setId(Long id) {
+        this.id = id;
     }
 
     @Override
@@ -64,8 +42,8 @@ public class Role {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        Role role1 = (Role) o;
-        return Objects.equals(id, role1.id) && role == role1.role;
+        Role roleTmp = (Role) o;
+        return Objects.equals(id, roleTmp.id) && role == roleTmp.role;
     }
 
     @Override
