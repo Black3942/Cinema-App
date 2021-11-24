@@ -70,8 +70,8 @@ public abstract class AbstractDao<T> {
         Transaction transaction = null;
         try (Session session = factory.openSession()) {
             transaction = session.beginTransaction();
-            T t = session.get(clazz, id);
-            session.delete(t);
+            T movieSession = session.get(clazz, id);
+            session.delete(movieSession);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
