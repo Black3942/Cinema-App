@@ -1,5 +1,5 @@
 # Cinema-service app
-Simulate a work for buying tickets app. Introduced authorization and authentication. All incoming and outgoing data are converted to json format, also implemented global expection handler.
+Simple app - simulate a work for buying tickets. Introduced authorization and authentication. All incoming and outgoing data are converted to json format, also implemented global expection handler.
 
 # Functionality
 This project have multiple endpoints with several access roles.<br/>
